@@ -56,6 +56,6 @@ echo "=================================================="
 echo -e "\e[1m\e[32m5. Downloading Node Monitoring config files ... \e[0m" && sleep 1
 cd $HOME
 rm -rf cosmos_node_monitoring
-https://github.com/viennguyenbkdn/cosmos_node_monitoring/tree/monitor-haqq.git
+git clone https://github.com/viennguyenbkdn/cosmos_node_monitoring.git -b monitor-haqq
 
 chmod +x $HOME/cosmos_node_monitoring/add_validator.sh
