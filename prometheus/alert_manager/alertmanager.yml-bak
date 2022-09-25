@@ -1,0 +1,32 @@
+global:
+  resolve_timeout: 1m
+
+templates: 
+- 'templates/*'
+
+route:
+  group_by: ['...']
+  group_wait: 0s
+  group_interval: 5m
+  repeat_interval: 1h
+  
+  routes:
+    - receiver: 'node-monitoring'
+      group_by: ['...']
+
+  receiver: node-monitoring
+
+receivers:
+- name: 'node-monitoring'
+  webhook_configs:
+  - send_resolved: true
+    url: 'http://alertmanager-bot:8080'
+  - send_resolved: true
+    url: 'https://discord.com/api/webhooks/1019616104764678225/nYnaUIYm6E5evYy9CSfWNiEOLke-nE4prGX51mHD0Yx8a3KuFQAXxK0g-QsVHIFj0jva'
+  email_configs:
+  - to: 'viennguyenbkdn@gmail.com'
+    from: 'gauthuikute@gmail.com'
+    smarthost: smtp.gmail.com:587
+    auth_username: 'gauthuikute@gmail.com'
+    auth_identity: 'gauthuikute@gmail.com'
+    auth_password: 'ttdmgdpwlzhombbq'
