@@ -23,27 +23,27 @@ scrape_configs:
     metrics_path: /metrics
     static_configs:
       - targets:
-          - 94.130.239.162:12660
+          - 95.216.21.32:30660
         labels:
           instance: 'HAQQ-prometheus'
   - job_name: cosmos
     metrics_path: /metrics
     static_configs:
       - targets:
-          - 94.130.239.162:haqqvaloper1yuyxpvufqrvquzvntt8g4wlkllwzz3ymn863l7
+          - 95.216.21.32:haqqvaloper1mc0kvscpucsndf948dnsrrpd954t9l4lfqevk6
         labels: {}
   - job_name: node
     metrics_path: /metrics
     static_configs:
       - targets:
-          - 94.130.239.162:9100
+          - 95.216.21.32:9100
         labels:
           instance: ''
   - job_name: validators
     metrics_path: /metrics/validators
     static_configs:
       - targets:
-          - 94.130.239.162:9300
+          - 95.216.21.32:9300
         labels: {}
   - job_name: validator
     metrics_path: /metrics/validator
@@ -53,9 +53,9 @@ scrape_configs:
         target_label: __param_address
     static_configs:
       - targets:
-          - 94.130.239.162:9300
+          - 95.216.21.32:9300
         labels:
-          address: haqqvaloper1yuyxpvufqrvquzvntt8g4wlkllwzz3ymn863l7
+          address: haqqvaloper1mc0kvscpucsndf948dnsrrpd954t9l4lfqevk6
   - job_name: wallet
     metrics_path: /metrics/wallet
     relabel_configs:
@@ -64,6 +64,6 @@ scrape_configs:
         target_label: __param_address
     static_configs:
       - targets:
-          - 94.130.239.162:9300
+          - 95.216.21.32:9300
         labels:
-          address: haqq1yuyxpvufqrvquzvntt8g4wlkllwzz3yml9klml
+          address: haqq1mc0kvscpucsndf948dnsrrpd954t9l4l9z4zjm
